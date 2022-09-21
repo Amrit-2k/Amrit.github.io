@@ -1,0 +1,48 @@
+
+.main-display{
+    
+    
+    text-align: center;
+    text-size-adjust: auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
+    background: black;
+    border: 1px;
+    border-style: solid ;
+    border-color:white;
+    color: white;
+   
+}
+.top-text{  
+    
+    padding-top: 10px;  
+    font-weight: 900;
+    color:whitesmoke;    
+    font-size: 40px;    
+}   
+.bottom-text,.export-text{
+     
+    padding-bottom: 15px;
+    
+    color: green;
+    font-size: 100px;
+    font-weight: 900;
+       
+}
+
+.export-text{        
+    color: red;
+    
+}
+.main-voltage,.load-voltage,.load-power,.solar-power,.total-power,.today-power,.export-power{
+    
+    background-color: black;    
+    border-style: solid ;
+    border-color:white;  
+    border-width: 3px;   
+    display: grid;
+    grid-template-rows: 1fr 2fr ;
+    
+}

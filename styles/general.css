@@ -1,0 +1,29 @@
+
+  .background-display {
+    /* This style below will be inherited */ 
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100%; 
+    width: 100%;
+
+    display:grid;
+    grid-template-rows: 1fr;
+
+    background: black;
+
+    border: 1px;
+    border-style: solid ;
+    border-color:white;
+
+    text-align: center;
+    
+    align-content: space-between;
+    
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
