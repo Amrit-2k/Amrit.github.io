@@ -27,6 +27,7 @@
                 console.log(this.response);
             };
             xhr.send(data);
+            console.log("send");
 
         }
 
@@ -37,7 +38,9 @@
             xmlhttp.open("GET", "scripts/receiveData.php", true);
             xmlhttp.send();
             // show the response in the console
+            console.log("receiving");
             xmlhttp.onreadystatechange = function() {
+                console.log("receiving..");
                 if (this.readyState == 4 && this.status == 200) {
                     // update the form with the new values
                     var response = JSON.parse(this.responseText);
@@ -63,6 +66,7 @@
                 }
                 // show the response in the console
                 console.log(this.responseText);
+                
             };
             
         }
