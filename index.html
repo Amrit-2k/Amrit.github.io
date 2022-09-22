@@ -15,19 +15,20 @@
     <script>
         function ajaxpost() {
             // (A) GET FORM DATA
-            var data = new FormData(document.getElementById("myform"));
+            var form = document.getElementById("myForm");
+            var data = new FormData(form);
 
             // (B) AJAX
             var xhr = new XMLHttpRequest();
             //create xhr object
-            xhr.open("POST", "https://amrit.github.io/scripts/sendData.php");
-            xhr.open("POST", "scripts/sendData.php");
+            //xhr.open("POST", "https://amrit.github.io/scripts/sendData.php");
+            //xhr.open("POST", "scripts/sendData.php");
             // What to do when server responds
             xhr.onload = function() {
                 console.log(this.response);
             };
             xhr.send(data);
-            console.log("send");
+            console.log(send);
 
         }
 
