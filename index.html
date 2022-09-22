@@ -15,12 +15,12 @@
     <script>
         function ajaxpost() {
             // (A) GET FORM DATA
-            var form = document.getElementById("myForm");
-            var data = new FormData(form);
+            var data = new FormData(document.getElementById("myform"));
 
             // (B) AJAX
-            var xhr = new XMLHttpRequest();           
-
+            var xhr = new XMLHttpRequest();
+            //create xhr object
+            xhr.open("POST", "https://amrit.github.io/scripts/sendData.php");
             xhr.open("POST", "scripts/sendData.php");
             // What to do when server responds
             xhr.onload = function() {
@@ -36,11 +36,9 @@
             // get request using XMLHttpRequest, get all the component states from scripts/displayer.php
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open("GET", "scripts/receiveData.php", true);
-            xmlhttp.send();
-            // show the response in the console
-            console.log("receiving");
+            xmlhttp.send();           
             xmlhttp.onreadystatechange = function() {
-                console.log("receiving..");
+              
                 if (this.readyState == 4 && this.status == 200) {
                     // update the form with the new values
                     // stringify the response
