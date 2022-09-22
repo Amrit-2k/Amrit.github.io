@@ -57,7 +57,7 @@
 
                 
 
-                $response = [
+                $response = array(
                     'mode' => ($modeSelect == 'on') ? true : false,
                     'time' => $time,
                     'date' => $date,
@@ -75,8 +75,8 @@
                     'circuit6' => ($circuit6 == 'on') ? true : false,
                     'circuit7' => ($circuit7 == 'on') ? true : false,
                     'circuit8' => ($circuit8 == 'on') ? true : false
-                ];
+                );
             
             echo json_encode($response);
 
-            ?>
+?>
