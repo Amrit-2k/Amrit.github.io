@@ -35,7 +35,7 @@
             
             // get request using XMLHttpRequest, get all the component states from scripts/displayer.php
             var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "scripts/receiveData.php", true);
+            xmlhttp.open("EGT", "scripts/receiveData.php", true);
             xmlhttp.send();
             // show the response in the console
             console.log("receiving");
@@ -43,7 +43,8 @@
                 console.log("receiving..");
                 if (this.readyState == 4 && this.status == 200) {
                     // update the form with the new values
-                    var response = JSON.parse(this.responseText);
+                    var response = JSON.parse(this.response);
+                    console.log(response);
                     // update the form with the new values
                     document.getElementsByName("modeSelect")[0].checked = response.mode;
                     document.getElementsByClassName("time")[0].innerHTML = response.time;
@@ -65,7 +66,7 @@
                     
                 }
                 // show the response in the console
-                console.log(this.responseText);
+                console.log(this.response);
                 
             };
             
@@ -80,6 +81,7 @@
     </script>
     </head>
 
+    // body onload="on_load()"s
 
     <body  onload="on_load()">
         <div class="background-display">
@@ -87,6 +89,7 @@
                 <div class="title">
                     SC-110 Solar Optimiser
                 </div>
+                // main display
                 <div class="menu">
                     <div class="date">
                         <span id="fullDate"></span>
@@ -210,7 +213,7 @@
                                 <input type="checkbox" onclick=ajaxpost() name="circuit7" >
                                 <span> 7</span>
                             </label>
-                        </div>
+                    </div>
                     </div> 
                     <div id="circuit-8" >  
                         <div class = "switch">                             

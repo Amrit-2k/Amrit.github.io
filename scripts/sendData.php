@@ -15,7 +15,7 @@ $response = [
 $file = fopen("dataDisplayer.txt", "w");
 fwrite($file, json_encode($response));
 fclose($file);
-header("location: index.php");
+header("location: ../index.html");
 ?>
 
 
