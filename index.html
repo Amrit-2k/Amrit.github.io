@@ -17,18 +17,16 @@
             // (A) GET FORM DATA
             var form = document.getElementById("myForm");
             var data = new FormData(form);
-            
+
             // (B) AJAX
-            var xhr = new XMLHttpRequest();
-            //create xhr object
-            //xhr.open("POST", "https://amrit.github.io/scripts/sendData.php");
-            //xhr.open("POST", "scripts/sendData.php");
+            var xhr = new XMLHttpRequest();           
+
+            xhr.open("POST", "scripts/sendData.php");
             // What to do when server responds
             xhr.onload = function() {
                 console.log(this.response);
             };
             xhr.send(data);
-            console.log(send);
 
         }
 
